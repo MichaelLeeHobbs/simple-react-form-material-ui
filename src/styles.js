@@ -1,4 +1,4 @@
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from 'material-ui/colors'
 
 export default {
   label: {
@@ -14,14 +14,14 @@ export default {
   errorMessage: {
     fontSize: 12,
     marginTop: 10,
-    color: Colors.red500
+    color: Colors.red[500]
   },
   fieldContainer: {
     paddingTop: 10,
     paddingBottom: 10
   },
   tag: {
-    background: Colors.grey300,
+    background: Colors.grey[300],
     padding: '5px 10px',
     display: 'inline-block',
     borderRadius: 20,

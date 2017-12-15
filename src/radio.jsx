@@ -1,6 +1,8 @@
 import React from 'react'
-import RadioButton from 'material-ui/RadioButton'
-import * as Colors from 'material-ui/styles/colors'
+import Radio from 'material-ui/Radio'
+// import { FormLabel, FormControl, FormControlLabel, FormHelperText } from 'material-ui/Form';
+import { FormControlLabel } from 'material-ui/Form';
+import * as Colors from 'material-ui/colors'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
 
@@ -29,15 +31,17 @@ export default class RadioComponent extends React.Component {
     return this.props.options.map((item) => {
       return (
         <div key={item.value}>
-          <RadioButton
-          label={item.label}
-          checked={item.value === this.props.value}
-          onCheck={() => this.props.onChange(item.value)}
-          disabled={this.props.disabled}
-          style={{ marginBotton: 16, marginTop: 16 }}
+          <FormControlLabel
+              value="male"
+              control={<Radio />}
+              label={item.label}
+              checked={item.value === this.props.value}
+              onChange={() => this.props.onChange(item.value)}
+              disabled={this.props.disabled}
+              style={{ marginBotton: 16, marginTop: 16 }}
           />
           <div
-          style={{ marginLeft: 40, color: Colors.grey500, cursor: 'pointer' }}
+          style={{ marginLeft: 40, color: Colors.grey[500], cursor: 'pointer' }}
           onClick={() => this.props.onChange(item.value)}>
             {(item.description || '').split('\n').map((text, index) => <div key={index}>{text}</div>)}
           </div>

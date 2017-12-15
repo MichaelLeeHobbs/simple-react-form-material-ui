@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from 'material-ui/Button'
 import _ from 'underscore'
 
 const propTypes = {
@@ -46,9 +46,9 @@ export default class Component extends React.Component {
   render () {
     return (
       <div>
-        <RaisedButton
-          label={this.props.label}
-          onClick={this.openFileDialog.bind(this)} />
+        <Button raised onClick={this.openFileDialog.bind(this)} >
+          {this.props.label}
+        </Button>
         <input
           type='file'
           multiple={this.props.multi}

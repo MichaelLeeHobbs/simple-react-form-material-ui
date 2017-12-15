@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkbox from 'material-ui/Checkbox'
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from 'material-ui/colors'
 import {FieldType, registerType} from 'simple-react-form'
 import styles from './styles'
 import _ from 'underscore'
@@ -51,7 +51,7 @@ export default class MultipleCheckboxComponent extends React.Component {
             {...this.props.passProps}
           />
           <div
-            style={{ marginLeft: 40, color: Colors.grey500, cursor: 'pointer' }}
+            style={{ marginLeft: 40, color: Colors.grey[500], cursor: 'pointer' }}
             onClick={() => this.onCheck(option.value, currentVal)}>
             {(option.description || '').split('\n').map((text, index) => <div key={index}>{text}</div>)}
           </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
 import IconButton from 'material-ui/IconButton'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from 'material-ui/Button'
 import {ArrayComponent} from 'simple-react-form'
 
 const styles = {
@@ -59,7 +59,7 @@ export default class MaterialArray extends ArrayComponent {
 
   renderRemoveButton (index) {
     if (this.props.disabled) return
-    return <RaisedButton label={this.props.removeLabel} onTouchTap={() => this.removeItem(index)}/>
+    return <Button raised onTouchTap={() => this.removeItem(index)}>{this.props.removeLabel}</Button>
   }
 
   renderSmallRemoveButton (index) {
@@ -80,7 +80,7 @@ export default class MaterialArray extends ArrayComponent {
     if (!this.props.showAddButton) return
     if (this.props.disabled) return
     if (this.props.useSmallSpace) return this.renderSmallAddButton()
-    return <RaisedButton label={this.props.addLabel} onTouchTap={() => this.addItem()}/>
+    return <Button raised onTouchTap={() => this.addItem()}>{this.props.addLabel}</Button>
   }
 
   renderSmallAddButton () {

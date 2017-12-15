@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkbox from 'material-ui/Checkbox'
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from 'material-ui/colors'
 import {FieldType, registerType} from 'simple-react-form'
 
 const propTypes = {
@@ -23,7 +23,7 @@ export default class CheckboxComponent extends React.Component {
           onCheck={() => this.props.onChange(!this.props.value)}
           {...this.props.passProps}
         />
-        <span style={{ color: Colors.red500 }}>{this.props.errorMessage}</span>
+        <span style={{ color: Colors.red[500] }}>{this.props.errorMessage}</span>
       </div>
     )
   }

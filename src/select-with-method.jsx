@@ -4,7 +4,7 @@ import MenuItem from 'material-ui/MenuItem'
 import _ from 'underscore'
 import {FieldType, registerType} from 'simple-react-form'
 import Chip from 'material-ui/Chip'
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from 'material-ui/colors'
 import Avatar from 'material-ui/Avatar'
 import FontIcon from 'material-ui/FontIcon'
 
@@ -265,12 +265,12 @@ export default class SelectWithMethodComponent extends React.Component {
       const image = item.image
       const initials = item.initials || undefined
       const color = item.color
-      const textColor = color ? Colors.white : Colors.grey900
+      const textColor = color ? Colors.grey[0] : Colors.grey[900]
       const icon = item.icon ? <FontIcon className='material-icons'>{item.icon}</FontIcon> : null
       let avatar = null
       if (initials || icon || image) {
         avatar = (
-          <Avatar src={image} size={32} icon={icon} color={Colors.blue200} backgroundColor={Colors.blue600}>
+          <Avatar src={image} size={32} icon={icon} color={Colors.blue[200]} backgroundColor={Colors.blue[600]}>
             {initials}
           </Avatar>
         )

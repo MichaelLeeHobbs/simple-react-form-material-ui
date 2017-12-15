@@ -1,7 +1,7 @@
 import React from 'react'
 import LinearProgress from 'material-ui/LinearProgress'
 import CircularProgress from 'material-ui/CircularProgress'
-import * as Colors from 'material-ui/styles/colors'
+import * as Colors from 'material-ui/colors'
 
 const styles = {
   image: {
@@ -77,8 +77,8 @@ export default class FilesPreview extends React.Component {
   renderPreview () {
     return (
       <div style={{ marginBottom: 10 }}>
-        <a style={{ color: Colors.blue400 }} href={this.props.url} target='_blank'>{this.props.url}</a>
-        <span style={{ color: Colors.red400, marginLeft: 5, cursor: 'pointer' }} onClick={this.props.onDelete.bind(this)}>{this.props.deleteLabel}</span>
+        <a style={{ color: Colors.blue[400] }} href={this.props.url} target='_blank'>{this.props.url}</a>
+        <span style={{ color: Colors.red[400], marginLeft: 5, cursor: 'pointer' }} onClick={this.props.onDelete.bind(this)}>{this.props.deleteLabel}</span>
       </div>
     )
   }
